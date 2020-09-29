@@ -1,0 +1,280 @@
+
+body {
+	margin: 0;
+	background: #ffffd5;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+}
+
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+header {
+  background: #fb8400;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  padding: 10px 0;
+}
+
+nav {
+  float: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 53px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: yellow;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: white;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+.top-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    'showcase showcase top-box-a'
+    'showcase showcase top-box-b';
+}
+
+
+/* Showcase */
+.showcase {
+  grid-area: showcase;
+  min-height: 300px;
+  background: #333;
+  background-size: cover;
+  background-position: center;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: top;
+  box-shadow: var(--shadow);
+}
+
+.showcase h1 {
+  font-size: 4rem;
+  margin-bottom: 0;
+  color: #ffffd5;
+}
+
+.showcase p {
+  font-size: 1.3rem;
+  margin-top: 0;
+  color: #ffffd5;
+   text-align: justify;
+}
+
+/* Top Box */
+.top-box {
+  background: var(--primary);
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+
+
+.top-box .price {
+  font-size: 2.5rem;
+}
+
+.top-box-a {
+  grid-area: top-box-a;
+   background: #009bfb;
+}
+
+.top-box-b {
+  grid-area: top-box-b;
+    background: #fb8400;
+}
+
+
+/* Portfolio */
+.portfolio {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 2fr));
+}
+
+.portfolio img {
+  width: 100%;
+  box-shadow: var(--shadow);
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  background: var(--dark);
+  color: var(--light);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 700px) {
+  .top-container {
+    grid-template-areas:
+      'showcase showcase'
+      'top-box-a top-box-b';
+  }
+
+  .showcase h1 {
+    font-size:1.5rem;
+  }
+
+  .main-nav ul {
+    grid-template-columns: 1fr;
+  }
+
+  .info {
+    grid-template-columns: 1fr;
+  }
+
+  .info .btn {
+    display: block;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+@media (max-width: 1500px) {
+  .top-container {
+    grid-template-areas:
+      'showcase'
+      'top-box-a'
+      'top-box-b';
+  }
+}
+
+hr.new5 {
+  border: 10px solid orange;
+  border-radius: 5px;
+  width: 50%
+}
+hr.new6 {
+  border: 6px solid blue;
+  border-radius: 5px;
+}
+
+.different {
+  display: grid;
+  grid-gap: 0px;
+  grid-template-areas:
+    'showcase showcase top-box-a'
+    'showcase showcase top-box-b';
+}
+
+.different h2 {
+  font-size: 2rem;
+  margin-bottom: 0;
+  margin-top: -28px;
+  color: #ffffd5;
+  margin-right: 40px
+}
+
+.different p {
+  font-size: 1.3rem;
+  margin-top: 0;
+  color: #ffffd5;
+   text-align: justify;
+}
+
+
+/* Showcase */
+.showtime {
+  grid-area: showcase;
+  height: 100px;
+background: #009bfb;
+  background-size: cover;
+  background-size: cover;
+  background-position: center;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: top;
+  box-shadow: var(--shadow);
+}
+
+.lookalike {
+  display: grid;
+  grid-gap: 0px;
+  grid-template-areas:
+    'showcase showcase top-box-a'
+    'showcase showcase top-box-b';
+}
+
+
+/* Showcase */
+.showdown {
+margin-top: 20px;
+  grid-area: showcase;
+  height: 262px;
+background: #fb8400;
+  background-position: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: top;
+  box-shadow: var(--shadow);
+}
+
+.showdown p {
+margin-bottom: 20px;
+}
+
+
+img.new0{
+margin-right: 50px;
+margin-bottom: 30px;
+margin-top:20px;
+margin-left: 20px;
+}
